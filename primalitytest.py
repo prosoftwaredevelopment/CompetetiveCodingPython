@@ -23,7 +23,7 @@ def approach2(n):
         return True
     if n%2 == 0 or n%3 == 0:# O(1)
         return False
-    for i in range(5,int(sqrt(n))+1): # [1,root n]
+    for i in range(5,int(sqrt(n))+1,6): # [1,root n] prime numbers are in the form of 6k-1 or 6k+1
         if n%i == 0 or n%(i+2) == 0:
             return False
     return True
